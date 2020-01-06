@@ -16,8 +16,6 @@ package includes ASGI base libraries, such as:\
 * Server base classes, asgiref.server\
 * A WSGI-to-ASGI adapter, in asgiref.wsgi
 
-%bcond_without tests
-
 
 Name:           python-%{pkgname}
 Version:        3.2.3
@@ -29,22 +27,12 @@ URL:            https://github.com/django/asgiref
 # PyPI tarball doesn't have tests
 Source0:        %{url}/archive/%{version}/%{srcname}-%{version}.tar.gz
 BuildArch:      noarch
-
-%description %{_description}
-
-%package -n python-%{pkgname}
-Summary:        %{summary}
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
-%if %{with tests}
-BuildRequires:  python-pytest >= 3.3
-BuildRequires:  python-pytest-asyncio
-%endif
-# https://github.com/django/asgiref/commit/9c6df6e02700092eb19adefff3552d44388f69b8
-Provides:       bundled(python3dist(async-timeout)) == 3.0.1
+
 %{?python_provide:%python_provide python-%{pkgname}}
 
-%description -n python3-%{pkgname} %{_description}
+%description %{_description}
 
 %prep
 %autosetup -n %{srcname}-%{version}
@@ -55,12 +43,7 @@ Provides:       bundled(python3dist(async-timeout)) == 3.0.1
 %install
 %py_install
 
-%if %{with tests}
-%check
-PYTHONPATH=%{buildroot}%{python_sitelib} py.test-%{python_version} --verbose tests
-%endif
-
-%files -n python-%{pkgname}
+%files
 %license LICENSE
 %doc README.rst
 %{python_sitelib}/%{libname}
