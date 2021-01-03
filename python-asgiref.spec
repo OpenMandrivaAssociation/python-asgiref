@@ -18,7 +18,7 @@ package includes ASGI base libraries, such as:\
 
 
 Name:           python-%{pkgname}
-Version:        3.2.3
+Version:        3.3.1
 Release:        1
 Summary:        ASGI specs, helper code, and adapters
 # This is BSD + bundled async-timeout ASL 2.0
