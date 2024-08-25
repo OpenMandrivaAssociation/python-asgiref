@@ -1,7 +1,7 @@
 %global srcname asgiref
 
 Name:		python-%{srcname}
-Version:	3.7.2
+Version:	3.8.1
 Release:	1
 Summary:	ASGI specs, helper code, and adapters
 # This is BSD + bundled async-timeout ASL 2.0
