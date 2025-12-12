@@ -2,7 +2,7 @@
 
 Name:		python-%{srcname}
 Version:	3.8.1
-Release:	1
+Release:	2
 Summary:	ASGI specs, helper code, and adapters
 # This is BSD + bundled async-timeout ASL 2.0
 License:	BSD and ASL 2.0
