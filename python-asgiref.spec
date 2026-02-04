@@ -1,7 +1,7 @@
 %global module asgiref
 
 Name:		python-asgiref
-Version:	3.11.0
+Version:	3.11.1
 Release:	1
 Summary:	ASGI specs, helper code, and adapters
 # This is BSD + bundled async-timeout ASL 2.0
@@ -26,8 +26,7 @@ package includes ASGI base libraries, such as:
 * Server base classes, asgiref.server
 * A WSGI-to-ASGI adapter, in asgiref.wsgi
 
-%prep
-%autosetup -n %{module}-%{version}
+%prep -a
 # Remove bundled egg-info
 rm -rf %{module}.egg-info
 
