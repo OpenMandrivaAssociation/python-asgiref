@@ -1,7 +1,7 @@
 %global module asgiref
 
 Name:		python-asgiref
-Version:	3.11.1
+Version:	3.12.1
 Release:	1
 Summary:	ASGI specs, helper code, and adapters
 # This is BSD + bundled async-timeout ASL 2.0
