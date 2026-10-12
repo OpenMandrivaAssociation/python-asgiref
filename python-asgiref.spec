@@ -2,10 +2,11 @@
 
 Name:		python-asgiref
 Version:	3.12.1
-Release:	1
+Release:	2
 Summary:	ASGI specs, helper code, and adapters
 # This is BSD + bundled async-timeout ASL 2.0
 License:	BSD-3-Clause AND ASL 2.0
+Group:	Development/Python
 URL:		https://github.com/django/asgiref
 # PyPI tarball doesn't have tests
 Source0:	%{url}/archive/%{version}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
